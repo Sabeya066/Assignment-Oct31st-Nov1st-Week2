@@ -14,12 +14,18 @@ test("Launching the browser for leaftap", async () => {
 
     let title = await page.title();
     console.log("The title of page is:", title);
-    await page.waitForTimeout(3000);
 
+    await page.waitForLoadState("load");
+    await page.waitForLoadState("domcontentloaded");
+
+    //await page.waitForTimeout(3000);
     //await page.pause();
+
+    await browser.close();
 
 })
 
+//Used the page fixture here not checking any browser in specific
 
 test("launching the browser using page fixture", async ({ page }) => {
 
@@ -30,6 +36,9 @@ test("launching the browser using page fixture", async ({ page }) => {
 
     let title2 = await page.title();
     console.log("The title from page fixture is:", title2);
+
+    await page.waitForLoadState("load");
+    await page.waitForLoadState("domcontentloaded");
 
 })
 
