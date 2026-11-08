@@ -3,29 +3,30 @@ import { test, webkit } from "@playwright/test";
 
 test("Launching Flipkart in Webkit", async () => {
 
-    let browser2 = await webkit.launch({ headless: false });
-    let context2 = await browser2.newContext();
-    let page2 = await context2.newPage();
-
-    await page2.goto("https://www.flipkart.com/");
-
-    let url3 = page2.url();
-    console.log("Without using page fixture the url of flipkart is:", url3);
-
-    let title3 = await page2.title();
-    console.log("Without using page fixture the title of flipkart is:", title3);
-
-})
-
-test("Launching Flipkart in Webkit by using pagefixture", async ({ page }) => {
+    let browser = await webkit.launch({ headless: false });
+    let context = await browser.newContext();
+    let page = await context.newPage();
 
     await page.goto("https://www.flipkart.com/");
 
-    let url4 = page.url();
-    console.log("Using page fixture the url of flipkart is:", url4);
+    let url = page.url();
+    console.log("Without using page fixture the url of flipkart is:", url);
 
-    let title4 = await page.title();
-    console.log("Using page fixture the title of flipkart is:", title4);
+    let title = await page.title();
+    console.log("Without using page fixture the title of flipkart is:", title);
+
+})
+
+test("Launching Flipkart in Webkit by using pagefixture", async ({ page, browserName }) => {
+
+    test.skip(browserName !== "webkit", "This test runs only on webkit");
+    await page.goto("https://www.flipkart.com/");
+
+    let url = page.url();
+    console.log("Using page fixture the url of flipkart is:", url);
+
+    let title = await page.title();
+    console.log("Using page fixture the title of flipkart is:", title);
 
 })
 
