@@ -21,7 +21,7 @@ for (let i = 0; i <= arr.length - 1; i++) {
 
 //2 Retrieving the unique & duplicate elements from a given array
 
-let arr1 = [12, 34, 55, 56, 66, 777, 77, 8, 12, 12, 34];
+let arr1 = [66, 34, 55, 56, 66, 777, 77, 8, 12, 12, 34, 66, 77, 88];
 let unique = [];
 let duplicate = [];
 
@@ -32,7 +32,7 @@ for (let i = 0; i <= arr1.length - 1; i++) {
     }
     else {
         if (!duplicate.includes(arr1[i])) {
-            duplicate.push(arr[i]);
+            duplicate.push(arr1[i]);
         }
     }
 }
@@ -41,7 +41,7 @@ console.log("The unique element are:", unique);
 console.log("The duplicate element are:", duplicate);
 
 /* Output: The unique element are: [
-  12,  34, 55, 56,
-  66, 777, 77,  8
+  66, 34, 55, 56, 777,
+  77,  8, 12, 88
 ]
-The duplicate element are: [ 12, 34 ] */
+The duplicate element are: [ 66, 12, 34, 77 ] */
