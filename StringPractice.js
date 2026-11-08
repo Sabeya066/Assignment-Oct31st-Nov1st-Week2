@@ -1,7 +1,7 @@
 
 //In this program learning the retrieval of Strings as elements by separating it using array
 
-let str="Helloo World";
+let str = "Helloo World";
 let arr=(str.trim().split(" "));
 console.log(`The length of ${arr[1]} is`, arr[1].length);
 console.log(`The length of ${arr[0]} is`, arr[0].length);
@@ -11,7 +11,7 @@ The length of Helloo is 6 */
 
 //********************************************************************************************
 
-let str2="   fly me   to   the moon  ";
+let str2 = "   fly me   to   the moon  ";
 let res=str2.trim().replace(/\s+/g," ").split(" ");
 console.log(res);
 //console.log(`The length of ${arr2[4]} is`,arr2[4].length);
