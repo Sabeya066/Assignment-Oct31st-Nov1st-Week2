@@ -12,7 +12,8 @@ Implemented the different type of Array methods listed below
 1) For Eg: push(),pop(),splice(),shift(),unshift(),includes(),indexOf(),join(),reverse() and sort()
 
 # About PalindromeInStringOrNot File
-String Reversal program which will reverse the string from backwards
+* Reversing the string and check if the given String is palindrome or not
+* The String should be same as the original and after reversing then it will be considered as palindrome
 
 I have wrote two logics with this:
 1)First logic is without using for loop
