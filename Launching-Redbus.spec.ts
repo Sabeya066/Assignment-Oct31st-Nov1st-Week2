@@ -1,6 +1,6 @@
 
 
-import { chromium, test, webkit } from "@playwright/test";
+import { chromium, test } from "@playwright/test";
 
 test("Launching Redbus in Edge", async () => {
 
@@ -23,13 +23,14 @@ test("Launching Redbus in Edge", async () => {
 
 test("Launching Redbus in Edge by using page fixture", async ({ page }) => {
 
+    test.skip(test.info().project.name !== "Microsoft Edge", "This test runs only on MS edge");
     await page.goto("https://www.redbus.in/");
 
-    let url2 = page.url();
-    console.log("Using page fixture the url of redbus is:", url2);
+    let url = page.url();
+    console.log("Using page fixture the url of redbus is:", url);
 
-    let title2 = await page.title();
-    console.log("Using page fixture the title of redbus is:", title2);
+    let title = await page.title();
+    console.log("Using page fixture the title of redbus is:", title);
 })
 
 
