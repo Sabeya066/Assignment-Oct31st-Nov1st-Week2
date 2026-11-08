@@ -9,11 +9,11 @@ arr.push(2, 60, 55, 85, 35);
 console.log("After pushing the multiple element in arr is:", arr);
 
 // Used splice method here to add the element at specific index
-arr.splice(2, 0, 6)
+arr.splice(2, 0, 6);
 console.log("Used splice method to push at specific index:", arr);
 
 // Used Splice method here to add multiple elements
-arr.splice(3, 0, 66, 77, 88)
+arr.splice(3, 0, 66, 77, 88);
 console.log("Used splice method to push multiple elements:", arr);
 
 /* O/P: THe first element pushed is: [ 30 ]
