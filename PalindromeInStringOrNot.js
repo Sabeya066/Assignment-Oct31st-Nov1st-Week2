@@ -1,6 +1,7 @@
 
-//String Reversal program which will reverse the string from backwards
-//First logic is without using for loop
+/* We have to reverse the string and check if the given String is palindrome or not
+The String should be same as the original and after reversing then it will be considered as palindrome
+First logic is without using for loop */
 
 function stringReversalValidation(str) {
 
