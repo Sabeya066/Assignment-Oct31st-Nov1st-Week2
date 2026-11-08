@@ -23,7 +23,7 @@ Performing Square of each numbers and printing it in reverse direction
 
 I have wrote two logics with this:
 1)First logic is without using function 
-2)Second logic is by using function and return
+2)Second logic is by using function
 
 # About StringPractice File
 In this program learned the retrieval of Strings as elements by separating it using array
