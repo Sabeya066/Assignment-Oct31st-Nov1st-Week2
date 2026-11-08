@@ -6,9 +6,9 @@
 let sqr;
 let num = 10;
 
-for (let i = num; num >= 0; num--) {
-    sqr = num * num;
-    console.log(`The square of ${num} is:`, sqr);
+for (let i = num; i >= 0; i--) {
+    sqr = i * i;
+    console.log(`The square of ${i} is:`, sqr);
 
 }
 
@@ -25,15 +25,14 @@ The square of 1 is: 1
 The square of 0 is: 0 */
 //**************************************************************************************
 
-//Second logic is by using function and return
+//Second logic is by using function
 
 function isNumber(number) {
     let sqr2;
 
-    for (let i = number; number >= 0; number--) {
-        sqr2 = number * number;
-        console.log(`The square of ${number} is:`, sqr2);
-
+    for (let i = number; i >= 0; i--) {
+        sqr2 = i * i;
+        console.log(`The square of ${i} is:`, sqr2);
     }
 
 }
