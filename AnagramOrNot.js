@@ -35,7 +35,7 @@ The given string is anagram */
 
 //Second logic written with return
 
-function isAnagram(str3, str4) {
+function isAnagramPrint(str3, str4) {
 
     str3 = str3.toLowerCase().trim().split("").sort();
     let original3 = str3.join("");
@@ -48,7 +48,7 @@ function isAnagram(str3, str4) {
     return original3 === original4;
 
 }
-let result = isAnagram(" Listen", "Radius");
+let result = isAnagramPrint(" Listen", "Radius");
 
 if (result) {
     console.log("Is Anagram");
