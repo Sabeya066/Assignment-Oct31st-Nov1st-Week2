@@ -109,8 +109,9 @@ console.log(arrRev);
 //********************************************************************************************
 
 let arr2 = [12, 34, 55, 32, 11, 54, 77];
-//9) Using sort method to sort the array in asecending order
-let sortAsc = arr2.sort((a, b) => a - b);
+//9) Now used spread operator so that it creates the copy of the array first
+// Using sort method to sort the array in asecending order
+let sortAsc = [...arr2].sort((a, b) => a - b);
 console.log(sortAsc);
 /* O/P:[
   11, 12, 32, 34,
@@ -118,12 +119,21 @@ console.log(sortAsc);
 ] */
 
 //Using sort method to sort the array in descending order
-let sortDesc = arr2.sort((a, b) => b - a);
+let sortDesc = [...arr2].sort((a, b) => b - a);
 console.log(sortDesc);
-/*
-[
+
+/* O/P:[
   77, 55, 54, 34,
   32, 12, 11
+] */
+//********************************************************************************************
+
+//Just for s reference to show that it doesnt mutates the original array
+console.log(sortAsc);
+
+/* O/P: [
+  11, 12, 32, 34,
+  54, 55, 77
 ] */
 
 //********************************************************************************************
