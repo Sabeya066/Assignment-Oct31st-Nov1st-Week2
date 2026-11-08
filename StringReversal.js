@@ -2,11 +2,11 @@
 // Reversing the String from Testleaf to faeltset - Without function to reverse the String
 
 
-let str="Testleaf"
-let rev="";
+let str = "Testleaf"
+let rev = "";
 
-for(let i=str.length-1; i>=0; i--){
-rev=rev+str.charAt(i);
+for (let i = str.length - 1; i >= 0; i--) {
+    rev = rev + str.charAt(i);
 
 }
 console.log(`The reversed String of ${str}:`, rev);
@@ -15,17 +15,19 @@ console.log(`The reversed String of ${str}:`, rev);
 
 //2 Reversing the String from Testleaf to faeltset- Used function to reverse the String
 
-let str2="Testleaf";
-let rev2="";
-function reversingString(str2){
+let str2 = "Testleaf";
 
-    for(let i=str2.length-1; i>=0; i--){
-rev2=rev+str2.charAt(i);
+function reversingString(str2) {
 
-}
-return `The reversed string using function is:${rev2}`;
+    let rev2 = "";
+
+    for (let i = str2.length - 1; i >= 0; i--) {
+        rev2 = rev2 + str2.charAt(i);
+
+    }
+    return `The reversed string using function is:${rev2}`;
 }
 
 console.log(reversingString("Testleaf"));
 
-// O/P: The reversed string using function is:faeltseTT
+// O/P: The reversed string using function is:faeltseT
