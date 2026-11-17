@@ -1,6 +1,6 @@
 
 
-import { chromium, test } from "@playwright/test";
+import { chromium, expect, test } from "@playwright/test";
 
 test("Launching Redbus in Edge", async () => {
 
@@ -17,6 +17,11 @@ test("Launching Redbus in Edge", async () => {
     let title = await page.title();
     console.log("Without using page fixture the title of redbus is:", title);
 
+    //Used Assertions to check if we launched the correct url
+    await expect(page).toHaveURL("https://www.redbus.in/");
+
+    await browser.close();
+
 })
 
 //**************************************************************************** 
@@ -31,6 +36,9 @@ test("Launching Redbus in Edge by using page fixture", async ({ page }) => {
 
     let title = await page.title();
     console.log("Using page fixture the title of redbus is:", title);
+
+    //Used Assertions to check if we launched the correct url
+    await expect(page).toHaveURL("https://www.redbus.in/");
 })
 
 
