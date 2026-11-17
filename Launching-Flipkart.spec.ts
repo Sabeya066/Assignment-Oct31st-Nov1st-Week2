@@ -1,5 +1,5 @@
 
-import { test, webkit } from "@playwright/test";
+import { test, webkit, expect } from "@playwright/test";
 
 test("Launching Flipkart in Webkit", async () => {
 
@@ -15,6 +15,11 @@ test("Launching Flipkart in Webkit", async () => {
     let title = await page.title();
     console.log("Without using page fixture the title of flipkart is:", title);
 
+    //Used assertion to check if we are in correct page
+    await expect(page).toHaveURL("https://www.flipkart.com/");
+
+    await browser.close();
+
 })
 
 test("Launching Flipkart in Webkit by using pagefixture", async ({ page, browserName }) => {
@@ -27,6 +32,9 @@ test("Launching Flipkart in Webkit by using pagefixture", async ({ page, browser
 
     let title = await page.title();
     console.log("Using page fixture the title of flipkart is:", title);
+
+    //Used assertion to check if we are in correct page
+    await expect(page).toHaveURL("https://www.flipkart.com/");
 
 })
 
