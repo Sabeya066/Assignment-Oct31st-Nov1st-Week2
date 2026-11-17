@@ -15,9 +15,6 @@ test("Launching the browser for leaftap", async () => {
     let title = await page.title();
     console.log("The title of page is:", title);
 
-    await page.waitForLoadState("load");
-    await page.waitForLoadState("domcontentloaded");
-
     //await page.waitForTimeout(3000);
     //await page.pause();
 
