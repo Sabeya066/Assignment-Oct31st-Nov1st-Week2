@@ -15,7 +15,7 @@ console.log(`The reversed String of ${str}:`, rev);
 
 //2 Reversing the String from Testleaf to faeltset- Used function to reverse the String
 
-let str2 = "Testleaf";
+//let str2;
 
 function reversingString(str2) {
 
