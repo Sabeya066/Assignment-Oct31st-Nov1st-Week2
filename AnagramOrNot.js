@@ -6,22 +6,22 @@ existing String will be equal in length) */
 
 function isAnagram(str1, str2) {
 
-    str1 = str1.toLowerCase().trim();
+    str1 = str1.toLowerCase().replace(/\s/g, "");
     //I'm using split() because js have sort in arrays
     str1 = str1.split("").sort();
     let original1 = str1.join("");
     console.log(str1);
 
-    str2 = str2.toLowerCase().trim().split("").sort();
+    str2 = str2.toLowerCase().replace(/\s/g, "").split("").sort();
     //str2=str2.split("").sort();
     let original2 = str2.join("");
     console.log(str2);
 
     if (original1 === original2) {
-        console.log("The given string is anagram")
+        console.log("The given string is anagram");
     }
     else {
-        console.log("The given String is not anagram")
+        console.log("The given String is not anagram");
     }
 
 }
@@ -37,11 +37,11 @@ The given string is anagram */
 
 function isAnagramPrint(str3, str4) {
 
-    str3 = str3.toLowerCase().trim().split("").sort();
+    str3 = str3.toLowerCase().replace(/\s/g, "").split("").sort();
     let original3 = str3.join("");
     console.log(str3);
 
-    str4 = str4.toLowerCase().trim().split("").sort();
+    str4 = str4.toLowerCase().replace(/\s/g, "").split("").sort();
     let original4 = str4.join("");
     console.log(str4);
 
